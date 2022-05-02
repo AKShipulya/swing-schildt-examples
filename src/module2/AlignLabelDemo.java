@@ -45,6 +45,7 @@ public class AlignLabelDemo {
         clearPanel.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {

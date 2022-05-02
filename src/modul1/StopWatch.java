@@ -30,6 +30,7 @@ public class StopWatch implements ActionListener {
         jFrame.add(jLabel);
 
         jFrame.setVisible(true);
+        jFrame.setLocationRelativeTo(null);
     }
 
     @Override

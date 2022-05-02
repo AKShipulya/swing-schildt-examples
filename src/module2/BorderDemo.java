@@ -19,6 +19,7 @@ public class BorderDemo {
         frame.add(label2);
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {

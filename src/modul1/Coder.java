@@ -48,6 +48,7 @@ public class Coder implements ActionListener {
         frame.add(resetButton);
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     @Override

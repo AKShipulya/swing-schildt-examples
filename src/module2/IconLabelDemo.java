@@ -28,6 +28,7 @@ public class IconLabelDemo {
         frame.add(labelIconText3);
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {

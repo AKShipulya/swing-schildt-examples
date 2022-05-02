@@ -25,6 +25,7 @@ public class JTextFieldDemo implements ActionListener {
         frame.add(label);
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     @Override

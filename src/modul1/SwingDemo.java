@@ -10,8 +10,10 @@ public class SwingDemo {
         jFrame.setSize(275, 100);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel jLabel = new JLabel("Swing powers the moder Java GUI");
+
         jFrame.add(jLabel);
         jFrame.setVisible(true);
+        jFrame.setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {
