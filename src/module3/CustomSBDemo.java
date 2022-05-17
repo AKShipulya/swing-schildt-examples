@@ -49,7 +49,7 @@ public class CustomSBDemo {
         );
 
         labelHSBInfo = new JLabel(
-                "<html>Vertical Scroll Bar information<br>" +
+                "<html>Horizontal Scroll Bar information<br>" +
                         "Minimum value: " + scrollBarHorizontal.getMinimum() + "<br>" +
                         "Maximum value: " + scrollBarHorizontal.getMaximum() + "<br>" +
                         "Visible amount (extent): " + scrollBarHorizontal.getVisibleAmount() + "<br>" +
