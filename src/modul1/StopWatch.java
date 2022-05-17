@@ -8,6 +8,9 @@ import java.util.Calendar;
 
 public class StopWatch implements ActionListener {
 
+    JButton startButton;
+    JButton stopButton;
+
     JLabel jLabel;
     long start;
 
@@ -17,11 +20,12 @@ public class StopWatch implements ActionListener {
         jFrame.setSize(230, 90);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JButton startButton = new JButton("Start");
-        JButton stopButton = new JButton("Stop");
+        startButton = new JButton("Start");
+        stopButton = new JButton("Stop");
 
         startButton.addActionListener(this);
         stopButton.addActionListener(this);
+        stopButton.setEnabled(false);
 
         jFrame.add(startButton);
         jFrame.add(stopButton);
@@ -39,8 +43,12 @@ public class StopWatch implements ActionListener {
 
         if (e.getActionCommand().equals("Start")) {
             start = calendar.getTimeInMillis();
+            startButton.setEnabled(false);
+            stopButton.setEnabled(true);
             jLabel.setText("Stopwatch is running...");
         } else {
+            startButton.setEnabled(true);
+            stopButton.setEnabled(false);
             jLabel.setText("Elapsed time is " + (double) (calendar.getTimeInMillis() - start) / 1000);
         }
     }
