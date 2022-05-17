@@ -28,15 +28,7 @@ public class SBDemo {
         scrollBarHorizontal = new JScrollBar(Adjustable.HORIZONTAL);
         scrollBarHorizontal.setMaximum(110);
 
-        scrollBarVertical.addAdjustmentListener(e -> {
-            if (scrollBarVertical.getValueIsAdjusting()) {
-                return;
-            }
-            labelVertical.setText("Value of vertical scroll bar: " + e.getValue());
-        });
-
-        scrollBarHorizontal.addAdjustmentListener(e ->
-                labelHorizontal.setText("Value of horizontal scroll bar: " + e.getValue()));
+        initListeners();
 
         labelSBInfo = new JLabel(
                 "<html>Scroll Bar Defaults<br>" +
@@ -55,6 +47,18 @@ public class SBDemo {
 
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+    }
+
+    private void initListeners() {
+        scrollBarVertical.addAdjustmentListener(e -> {
+            if (scrollBarVertical.getValueIsAdjusting()) {
+                return;
+            }
+            labelVertical.setText("Value of vertical scroll bar: " + e.getValue());
+        });
+
+        scrollBarHorizontal.addAdjustmentListener(e ->
+                labelHorizontal.setText("Value of horizontal scroll bar: " + e.getValue()));
     }
 
     public static void main(String[] args) {
