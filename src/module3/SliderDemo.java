@@ -18,7 +18,9 @@ public class SliderDemo {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         sliderVertical = new JSlider(JSlider.VERTICAL);
+        sliderVertical.setSnapToTicks(true);
         sliderHorizontal = new JSlider();
+        sliderHorizontal.setInverted(true);
 
         sliderVertical.setMajorTickSpacing(10);
         sliderHorizontal.setMajorTickSpacing(20);
